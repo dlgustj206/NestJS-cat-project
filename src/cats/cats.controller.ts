@@ -57,11 +57,13 @@ export class CatsController {
     return this.authService.jwtLogIn(data);
   }
 
+  /* JWT 자체를 프론트에서 제거해버리면 로그아웃되므로 API 필요 없음
   @ApiOperation({ summary: '로그아웃' })
   @Post('logout')
   logOut() {
     return 'logout';
   }
+  */
 
   @ApiOperation({ summary: '고양이 이미지 업로드' })
   @Post('upload/cats')
